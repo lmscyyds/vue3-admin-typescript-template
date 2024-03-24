@@ -1,0 +1,22 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "code": "ERR_PNPM_UNSUPPORTED_ENGINE",
+    "packageId": "C:\\Users\\23071401\\Desktop\\vue-admin",
+    "wanted": {
+      "node": "^18.0.0 || ^20.0.0"
+    },
+    "current": {
+      "node": "v14.17.2",
+      "pnpm": "6.32.23"
+    },
+    "err": {
+      "name": "pnpm",
+      "message": "Unsupported engine for C:\\Users\\23071401\\Desktop\\vue-admin: wanted: {\"node\":\"^18.0.0 || ^20.0.0\"} (current: {\"node\":\"v14.17.2\",\"pnpm\":\"6.32.23\"})",
+      "code": "ERR_PNPM_UNSUPPORTED_ENGINE",
+      "stack": "pnpm: Unsupported engine for C:\\Users\\23071401\\Desktop\\vue-admin: wanted: {\"node\":\"^18.0.0 || ^20.0.0\"} (current: {\"node\":\"v14.17.2\",\"pnpm\":\"6.32.23\"})\n    at checkEngine (D:\\nvm\\v14.17.2\\node_modules\\pnpm\\dist\\pnpm.cjs:41467:16)\n    at checkPackage (D:\\nvm\\v14.17.2\\node_modules\\pnpm\\dist\\pnpm.cjs:43563:104)\n    at packageIsInstallable (D:\\nvm\\v14.17.2\\node_modules\\pnpm\\dist\\pnpm.cjs:43587:61)\n    at tryReadProjectManifest (D:\\nvm\\v14.17.2\\node_modules\\pnpm\\dist\\pnpm.cjs:43919:55)\n    at async handler (D:\\nvm\\v14.17.2\\node_modules\\pnpm\\dist\\pnpm.cjs:123946:48)\n    at async D:\\nvm\\v14.17.2\\node_modules\\pnpm\\dist\\pnpm.cjs:186827:21\n    at async run (D:\\nvm\\v14.17.2\\node_modules\\pnpm\\dist\\pnpm.cjs:186801:34)\n    at async runPnpm (D:\\nvm\\v14.17.2\\node_modules\\pnpm\\dist\\pnpm.cjs:187020:5)\n    at async D:\\nvm\\v14.17.2\\node_modules\\pnpm\\dist\\pnpm.cjs:187012:7"
+    }
+  }
+}
