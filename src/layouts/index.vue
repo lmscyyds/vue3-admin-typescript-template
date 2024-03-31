@@ -201,8 +201,13 @@ const enableAppSetting = import.meta.env.VITE_APP_SETTING === 'true'
 
     .main {
       position: relative;
-      flex: auto;
+      display: flex;
+      flex: 1;
+      flex-basis: auto;
+      flex-direction: column;
+      //flex: auto;
       height: 100%;
+      padding: 10px;
       overflow: hidden;
       transition: 0.3s;
     }

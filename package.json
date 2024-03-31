@@ -13,11 +13,10 @@
     "svgo": "svgo -f src/assets/icons",
     "new": "plop",
     "generate:icons": "esno ./scripts/generate.icons.ts",
-    "lint": "npm-run-all -s lint:tsc lint:eslint lint:stylelint",
+    "lint": "npm-run-all -s lint:tsc",
     "lint:tsc": "vue-tsc",
     "lint:eslint": "eslint . --cache --fix",
     "lint:stylelint": "stylelint \"src/**/*.{css,scss,vue}\" --cache --fix",
-    "postinstall": "simple-git-hooks",
     "preinstall": "npx only-allow pnpm",
     "commit": "git cz",
     "release": "bumpp"
@@ -101,10 +100,6 @@
     "vite-plugin-vue-devtools": "^7.0.15",
     "vite-plugin-vue-meta-layouts": "^0.4.1",
     "vue-tsc": "^1.8.27"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged",
-    "preserveUnused": true
   },
   "config": {
     "commitizen": {

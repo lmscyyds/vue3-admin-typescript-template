@@ -53,12 +53,12 @@ function handleLogin() {
       loading.value = true
       userStore.login(loginForm.value).then(() => {
         loading.value = false
-        if (loginForm.value.remember) {
-          localStorage.setItem('login_account', loginForm.value.account)
-        }
-        else {
-          localStorage.removeItem('login_account')
-        }
+        // if (loginForm.value.remember) {
+        //   localStorage.setItem('login_account', loginForm.value.username)
+        // }
+        // else {
+        localStorage.removeItem('login_account')
+        // }
         router.push(redirect.value)
       }).catch(() => {
         loading.value = false
@@ -181,9 +181,9 @@ function testAccount(account: string) {
           </ElFormItem>
         </div>
         <div class="flex-bar">
-<!--          <ElCheckbox v-model="loginForm.remember">-->
-<!--            记住我-->
-<!--          </ElCheckbox>-->
+          <!--          <ElCheckbox v-model="loginForm.remember"> -->
+          <!--            记住我 -->
+          <!--          </ElCheckbox> -->
           <ElLink type="primary" :underline="false" @click="formType = 'reset'">
             忘记密码了?
           </ElLink>

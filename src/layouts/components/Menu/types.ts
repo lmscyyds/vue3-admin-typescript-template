@@ -37,6 +37,7 @@ export interface SubMenuProps {
   uniqueKey: string[]
   menu: Menu.recordRaw
   level?: number
+  children?: any
 }
 
 export interface SubMenuItemProps {

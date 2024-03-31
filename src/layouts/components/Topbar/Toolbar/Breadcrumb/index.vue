@@ -6,10 +6,15 @@ import useSettingsStore from '@/store/modules/settings'
 
 const route = useRoute()
 
+interface breadcrumb {
+  path: string
+  title: string
+}
+
 const settingsStore = useSettingsStore()
 
-const breadcrumbList = computed(() => {
-  const breadcrumbList = []
+const breadcrumbList = computed<breadcrumb[]>(() => {
+  const breadcrumbList: breadcrumb[] = []
   if (settingsStore.settings.home.enable) {
     breadcrumbList.push({
       path: settingsStore.settings.home.fullPath,
@@ -21,7 +26,7 @@ const breadcrumbList = computed(() => {
       if (item.hide === false) {
         breadcrumbList.push({
           path: item.path,
-          title: item.title,
+          title: String(item.title),
         })
       }
     })

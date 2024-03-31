@@ -27,6 +27,9 @@ import 'virtual:uno.css'
 
 // 全局样式
 import '@/assets/styles/globals.scss'
+import '@/assets/styles/common.scss'
+import '@/assets/styles/element.scss'
+import '@/assets/styles/element-dark.scss'
 
 const app = createApp(App)
 app.use(FloatingVue, {

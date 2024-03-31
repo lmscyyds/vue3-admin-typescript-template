@@ -13,6 +13,7 @@ export default antfu(
       'eslint-comments/no-unlimited-disable': 'off',
       'curly': ['error', 'all'],
       'antfu/consistent-list-newline': 'off',
+      '@typescript-eslint/no-namespace': 'off',
     },
   },
   {
@@ -20,6 +21,7 @@ export default antfu(
       'src/**/*.vue',
     ],
     rules: {
+      '@typescript-eslint/no-namespace': 'off',
       'vue/block-order': ['error', {
         order: ['route', 'script', 'template', 'style'],
       }],

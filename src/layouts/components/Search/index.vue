@@ -53,6 +53,14 @@ interface listTypes {
   }[]
 }
 
+interface breadcrumb {
+  breadcrumb: breadcrumb[]
+  icon?: string
+  link?: string
+  path: string
+  title: string | (() => string)
+}
+
 const isShow = ref(false)
 const searchInput = ref('')
 const sourceList = ref<listTypes[]>([])
@@ -65,8 +73,8 @@ onBeforeUpdate(() => {
   searchResultItemRef.value = []
 })
 
-const resultList = computed(() => {
-  let result = []
+const resultList = computed<breadcrumb[]>(() => {
+  let result: breadcrumb[] = []
   result = sourceList.value.filter((item) => {
     let flag = false
     if (item.title) {
@@ -100,10 +108,9 @@ const resultList = computed(() => {
       flag = true
     }
     return flag
-  })
+  }) as breadcrumb[]
   return result
 })
-
 watch(() => isShow.value, (val) => {
   if (val) {
     searchInput.value = ''
