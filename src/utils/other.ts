@@ -119,7 +119,7 @@ export function isObjectValueEqual(a: { [key: string]: any }, b: { [key: string]
     const propName = aProps[i]
     const propA = a[propName]
     const propB = b[propName]
-    if (!b.hasOwnProperty(propName)) {
+    if (!Object.prototype.hasOwnProperty.call(b, propName)) {
       return false
     }
     if (propA instanceof Object) {
@@ -375,6 +375,7 @@ export function filterEnum(callValue: any, enumData?: any, fieldNames?: FieldNam
  * @description 递归查找 callValue 对应的 enum 值
  */
 export function findItemNested(enumData: any, callValue: any, value: string, children: string) {
+  // eslint-disable-next-line array-callback-return
   return enumData.reduce((accumulator: any, current: any) => {
     if (accumulator) {
       return accumulator

@@ -131,18 +131,18 @@ onMounted(() => {
             router.push(tabbarStore.list[index - 1].fullPath)
           }
           break
-        // 切换到当前标签页紧邻的下一个标签页
+          // 切换到当前标签页紧邻的下一个标签页
         case 'alt+right':
           if (tabbarStore.list.at(-1)?.tabId !== activedTabId.value) {
             const index = tabbarStore.list.findIndex(item => item.tabId === activedTabId.value)
             router.push(tabbarStore.list[index + 1].fullPath)
           }
           break
-        // 关闭当前标签页
+          // 关闭当前标签页
         case 'alt+w':
           tabbar.closeById(activedTabId.value)
           break
-        // 切换到第 n 个标签页
+          // 切换到第 n 个标签页
         case 'alt+1':
         case 'alt+2':
         case 'alt+3':

@@ -221,7 +221,7 @@ function sortTable() {
       <!-- 表格 header 按钮 -->
       <template #tableHeader="scope">
         <el-button v-auth="'add'" type="primary" :icon="CirclePlus">
-          新增用户
+          新增菜单
         </el-button>
         <el-button v-auth="'batchAdd'" type="primary" :icon="Upload" plain>
           批量添加用户

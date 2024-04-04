@@ -8,10 +8,18 @@ import 'vue-m-message/dist/style.css'
 
 import 'overlayscrollbars/overlayscrollbars.css'
 
+import VForm3 from 'vform3-builds'
+
+// 引入VForm3库
 import App from './App.vue'
 import pinia from './store'
 import router from './router'
 import ui from './ui-provider'
+
+// 引入低代码VForm3
+import 'vform3-builds/dist/designer.style.css'
+
+// 引入VForm3样式
 
 // 自定义指令
 import directive from '@/utils/directive'
@@ -39,6 +47,7 @@ app.use(Message)
 app.use(pinia)
 app.use(router)
 app.use(ui)
+app.use(VForm3)
 directive(app)
 if (icons.isOfflineUse) {
   for (const info of icons.collections) {

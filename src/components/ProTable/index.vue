@@ -3,7 +3,7 @@
 <script setup lang="ts" name="ProTable">
 import { computed, onMounted, provide, reactive, ref, unref, watch } from 'vue'
 import { ElTable } from 'element-plus'
-import { Operation, Refresh, Search } from '@element-plus/icons-vue'
+import { DCaret, Operation, Refresh, Search } from '@element-plus/icons-vue'
 import Sortable from 'sortablejs'
 import Pagination from './components/Pagination.vue'
 import ColSetting from './components/ColSetting.vue'
@@ -29,6 +29,7 @@ export interface ProTableProps {
   toolButton?: ('refresh' | 'setting' | 'search')[] | boolean // 是否显示表格功能按钮 ==> 非必传（默认为true）
   rowKey?: string // 行数据的 Key，用来优化 Table 的渲染，当表格数据多选时，所指定的 id ==> 非必传（默认为 id）
   searchCol?: number | Record<BreakPoint, number> // 表格搜索项 每列占比配置 ==> 非必传 { xs: 1, sm: 2, md: 2, lg: 3, xl: 4 }
+
 }
 
 // 接受父组件参数，配置默认值
@@ -71,8 +72,18 @@ const radio = ref('')
 const { selectionChange, selectedList, selectedListIds, isSelected } = useSelection(props.rowKey)
 
 // 表格操作 Hooks
-const { tableData, pageable, searchParam, searchInitParam, getTableList, search, reset, handleSizeChange, handleCurrentChange }
-    = useTable(props.requestApi, props.initParam, props.pagination, props.dataCallback, props.requestError)
+const {
+  tableData,
+  pageable,
+  searchParam,
+  searchInitParam,
+  getTableList,
+  search,
+  reset,
+  handleSizeChange,
+  handleCurrentChange,
+}
+  = useTable(props.requestApi, props.initParam, props.pagination, props.dataCallback, props.requestError)
 
 // 清空选中数据列表
 const clearSelection = () => tableRef.value!.clearSelection()

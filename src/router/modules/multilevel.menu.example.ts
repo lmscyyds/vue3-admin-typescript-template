@@ -24,18 +24,18 @@ const routes: RouteRecordRaw = {
     },
     {
       path: 'level2',
-      name: 'multilevelMenuExample2',
+      name: 'vFormDesigner',
       redirect: '/multilevel_menu_example/level2/page',
       meta: {
-        title: '导航2',
+        title: '低代码',
       },
       children: [
         {
           path: 'page',
-          name: 'multilevelMenuExample2-1',
+          name: 'vFormDesignerPage',
           component: () => import('@/views/multilevel_menu_example/level2/page.vue'),
           meta: {
-            title: '导航2-1',
+            title: '低代码-前端',
           },
         },
         {

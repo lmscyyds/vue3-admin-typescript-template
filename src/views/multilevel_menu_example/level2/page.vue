@@ -1,12 +1,13 @@
-<route lang="yaml">
-meta:
-  title: 导航2-1
-</route>
+<script setup name="vFormDesignerPage" lang="ts"></script>
 
 <template>
-  <div>
-    <PageMain>
-      多级导航2-1
-    </PageMain>
-  </div>
+  <PageMain>
+    <v-form-designer />
+  </PageMain>
 </template>
+
+  <style lang="scss">
+  body {
+    margin: 0;  /* 如果页面出现垂直滚动条，则加入此行CSS以消除之 */
+  }
+  </style>

@@ -19,8 +19,8 @@ function toggleColorScheme(event: MouseEvent) {
       Math.max(y, innerHeight - y),
     )
     const clipPath = [
-      `circle(0px at ${x}px ${y}px)`,
-      `circle(${endRadius}px at ${x}px ${y}px)`,
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${endRadius}px at ${x}px ${y}px)`,
     ]
     document.documentElement.animate(
       {

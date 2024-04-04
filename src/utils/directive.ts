@@ -9,6 +9,7 @@ export default function directive(app: App) {
       }
     },
   })
+
   app.directive('auth-all', {
     mounted: (el, binding) => {
       if (!useAuth().authAll(binding.value)) {

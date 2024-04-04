@@ -1,5 +1,7 @@
 import antfu from '@antfu/eslint-config'
 
+// import typescriptEslint from "@typescript-eslint"
+
 export default antfu(
   {
     unocss: true,
@@ -8,8 +10,10 @@ export default antfu(
       'dist*',
     ],
   },
+
   {
     rules: {
+      'no-console': 'off',
       'eslint-comments/no-unlimited-disable': 'off',
       'curly': ['error', 'all'],
       'antfu/consistent-list-newline': 'off',
