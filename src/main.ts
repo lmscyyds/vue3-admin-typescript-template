@@ -8,18 +8,17 @@ import 'vue-m-message/dist/style.css'
 
 import 'overlayscrollbars/overlayscrollbars.css'
 
-import VForm3 from 'vform3-builds'
+// 引入低代码VForm3
 
 // 引入VForm3库
 import App from './App.vue'
 import pinia from './store'
 import router from './router'
 import ui from './ui-provider'
-
-// 引入低代码VForm3
-import 'vform3-builds/dist/designer.style.css'
+import VForm3 from '@/../lib/vform/designer.umd.js'
 
 // 引入VForm3样式
+import '../lib/vform/designer.style.css'
 
 // 自定义指令
 import directive from '@/utils/directive'

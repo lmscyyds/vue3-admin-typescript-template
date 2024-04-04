@@ -17,6 +17,9 @@
       ],
       "#/*": [
         "src/types/*"
+      ],
+      "~/*": [
+        "lib/*"
       ]
     },
     "resolveJsonModule": true,

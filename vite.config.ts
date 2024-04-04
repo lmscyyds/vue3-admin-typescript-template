@@ -34,6 +34,14 @@ export default async ({ mode, command }) => {
     build: {
       outDir: mode === 'production' ? 'dist' : `dist-${mode}`,
       sourcemap: env.VITE_BUILD_SOURCEMAP === 'true',
+      /* 其他build生产打包配置省略 */
+      // ...
+      commonjsOptions: {
+        include: /node_modules|lib/, // 这里记得把lib目录加进来，否则生产打包会报错！！
+      },
+    },
+    optimizeDeps: {
+      include: ['@/../lib/vform/designer.umd.js'], // 此处路径必须跟main.js中import路径完全一致！
     },
     define: {
       __SYSTEM_INFO__: JSON.stringify({
