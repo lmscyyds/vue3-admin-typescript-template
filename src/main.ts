@@ -38,6 +38,9 @@ import '@/assets/styles/common.scss'
 import '@/assets/styles/element.scss'
 import '@/assets/styles/element-dark.scss'
 
+// 表单弹窗组件
+import ProFormDialog from '@/components/ProFormDialog/index.vue'
+
 const app = createApp(App)
 app.use(FloatingVue, {
   distance: 12,
@@ -47,6 +50,7 @@ app.use(pinia)
 app.use(router)
 app.use(ui)
 app.use(VForm3)
+app.component('ProFormDialog', ProFormDialog)
 directive(app)
 if (icons.isOfflineUse) {
   for (const info of icons.collections) {

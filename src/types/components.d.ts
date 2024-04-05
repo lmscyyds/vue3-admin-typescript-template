@@ -35,6 +35,7 @@ declare module 'vue' {
     PageMain: typeof import('./../components/PageMain/index.vue')['default']
     Pagination: typeof import('./../components/ProTable/components/Pagination.vue')['default']
     PcasCascader: typeof import('./../components/PcasCascader/index.vue')['default']
+    ProFormDialog: typeof import('./../components/ProFormDialog/index.vue')['default']
     ProTable: typeof import('./../components/ProTable/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

@@ -2,6 +2,7 @@ import type { PluginOption } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueLegacy from '@vitejs/plugin-legacy'
+import requireTransform from 'vite-plugin-require-transform'
 import appInfo from './app-info'
 
 import createDevtools from './devtools'
@@ -28,6 +29,9 @@ export default function createVitePlugins(viteEnv, isBuild = false) {
         'es.array.at',
         'es.array.find-last',
       ],
+    }),
+    requireTransform({
+      fileRegex: /.js$|.vue$/,
     }),
   ]
   vitePlugins.push(createDevtools(viteEnv))

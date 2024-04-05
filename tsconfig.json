@@ -27,7 +27,8 @@
       "vite/client",
       "vite-plugin-pages/client",
       "vite-plugin-vue-meta-layouts/client",
-      "element-plus/global"
+      "element-plus/global",
+      "node"
     ],
     "allowImportingTsExtensions": true,
     "allowJs": false,

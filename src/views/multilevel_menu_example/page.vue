@@ -1,8 +1,6 @@
 <script setup lang="tsx" name="useProTable">
 import { reactive, ref } from 'vue'
 
-// import { useRouter } from 'vue-router'
-
 // import { User } from "@/api/interface";
 
 // import { useAuthButtons } from "@/hooks/useAuthButtons";
@@ -24,6 +22,9 @@ import {
 // getUserStatus,
 // getUserGender
 } from '@/api/modules/user'
+
+// import { useRouter } from 'vue-router'
+const formVisible = ref(false)
 
 // const router = useRouter()
 
@@ -151,6 +152,11 @@ function sortTable() {
   ElMessage.success('修改列表排序成功')
 }
 
+function addHandle() {
+  formVisible.value = true
+  console.log('tanqi', formVisible)
+}
+
 // 删除用户信息
 // const deleteAccount = async (params: User.ResUserList) => {
 //   await useHandleData(deleteUser, { id: [params.id] }, `删除【${params.username}】用户`);
@@ -220,7 +226,7 @@ function sortTable() {
     >
       <!-- 表格 header 按钮 -->
       <template #tableHeader="scope">
-        <el-button v-auth="'add'" type="primary" :icon="CirclePlus">
+        <el-button type="primary" :icon="CirclePlus" @click="addHandle">
           新增菜单
         </el-button>
         <el-button v-auth="'batchAdd'" type="primary" :icon="Upload" plain>
@@ -270,5 +276,9 @@ function sortTable() {
     </ProTable>
     <!--    <UserDrawer ref="drawerRef" /> -->
     <!--    <ImportExcel ref="dialogRef" /> -->
+    <ProFormDialog
+      v-model:visible.sync="formVisible"
+      component-path="views/multilevel_menu_example/components/MenuEditFormDialog.vue"
+    />
   </div>
 </template>
